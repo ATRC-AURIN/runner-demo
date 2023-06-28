@@ -1,0 +1,16 @@
+{
+  "name": "atrc-workflow-runner",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "workflow": "node index.js"
+  },
+  "author": "",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "cli-color": "^2.0.1",
+    "js-yaml": "^4.1.0",
+    "shelljs": "^0.8.5"
+  }
+}

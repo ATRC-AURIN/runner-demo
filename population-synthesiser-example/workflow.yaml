@@ -1,0 +1,50 @@
+operations:
+  - tool_name: registry.rc.nectar.org.au/atrc-core/populationsynthesiser
+    inputs:
+      - name: REFERENCE_SAMPLE
+        method: initial_data
+        filename: reference_sample.csv
+      - name: PERSONS_CONTROL
+        method: initial_data_multiple
+        files:
+          - filename: persons-control1.csv
+          - filename: persons-control2.csv
+      - name: HOUSEHOLDS_CONTROL
+        method: initial_data_multiple
+        files:
+          - filename: households-control1.csv
+          - filename: households-control2.csv
+      - name: GROUP_ID
+        method: value
+        value: "hhid"
+      - name: INDIVIDUAL_ID
+        method: value
+        value: "persid"
+      - name: GEO_HIERARCHY
+        method: initial_data
+        filename: geo-hierarchy.csv
+      - name: ZONE
+        method: value
+        value: "ZONE"
+      - name: REGION
+        method: value
+        value: "REGION"
+      - name: COUNT
+        method: value
+        value: "n"
+      - name: ML_FIT_ALGORITHM
+        method: value
+        value: "ipu"
+      - name: ML_REPLICATE_ALGORITHM
+        method: value
+        value: "trs"
+      - name: OUTPUT_DIRECTORY
+        method: value
+        value: "/atrc_data/outputs"
+      - name: SYNTHETIC_POPULATION_FILENAME
+        method: value
+        value: "synthetic_population.csv"
+    outputs:
+      - name: SYNTHETIC_POPULATION
+        type: csv
+        filename: synthetic_population.csv
