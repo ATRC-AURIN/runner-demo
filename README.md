@@ -14,6 +14,46 @@ You'll also need **Docker** installed on your machine. If you haven't used Docke
 
 Once you have Docker installed, copy this repository onto your machine (you can use the green `< > Code ▼ ` button above for some options here), and then you should be able to write and run workflows locally following the steps below.
 
+## Available tools
+
+### [rCITI](https://www.rciti.unsw.edu.au/) PopulationSynthesiser
+
+Synthetic populations are crucial inputs for agent-based microsimulation models. This tool offers functions for creating create synthetic populations using data from the Australian Bureau of Statistics. To generate a synthetic population, a reference sample and population margins are required.
+
+> To use this tool, set the `tool name` for the relevant operation in your `workflow.yaml` to:
+
+```
+registry.rc.nectar.org.au/atrc-core/populationsynthesiser
+```
+
+The repository where you can find out more about this tool is here: [github.com/ATRC-AURIN/PopulationSynthesiser](https://github.com/ATRC-AURIN/PopulationSynthesiser)
+
+### [ITLS](https://www.sydney.edu.au/business/our-research/institute-of-transport-and-logistics-studies.html) OSMParser
+
+Simulation tools like MATSim require transport network information - such as information about roads or public transport networks - to be provided in particular ways and formats, formats which are different from the ways this information is most available. OSMParser can convert OpenStreetMap data into network information that can be used by MATSim.
+
+> To use this tool, set the `tool name` for the relevant operation in your `workflow.yaml` to:
+
+```
+registry.rc.nectar.org.au/atrc-core/planitosmparserwrapper
+```
+
+The repository where you can find out more about this tool is here: [github.com/ATRC-AURIN/PLANitOsmParserWrapper](https://github.com/ATRC-AURIN/PLANitOsmParserWrapper)
+
+### [ITLS](https://www.sydney.edu.au/business/our-research/institute-of-transport-and-logistics-studies.html) MATSimWrapper
+
+> Note: this tool requires an x86 processor architecture to run. It's unlikely to work on an ARM-based architecture, so for example if you're using an M1 or M2 MacBook you won't be able to run this tool locally.
+
+MATSim is a complex open source tool that allows for running large-scale agent-based transport simulations. This tool wraps and containerises MATSim, allowing to run in cloud-like environments, and also provides simplified ways to set default configurations required by MATSim.
+
+> To use this tool, set the `tool name` for the relevant operation in your `workflow.yaml` to:
+
+```
+registry.rc.nectar.org.au/atrc-core/planitmatsimwrapper
+```
+
+The repository where you can find out more about this tool is here: [github.com/ATRC-AURIN/PLANitMatsimWrapper](https://github.com/ATRC-AURIN/PLANitMatsimWrapper)
+
 ## Running a workflow
 
 Each available tool has an example workflow. You can see these examples as folders in the root of this project.
@@ -92,20 +132,6 @@ operations:
       - name: RESULT
         filename: result.json
 ```
-
-## Available tools
-
-### [rCITI](https://www.rciti.unsw.edu.au/) PopulationSynthesiser
-
-Synthetic populations are crucial inputs for agent-based microsimulation models. This tool offers functions for creating create synthetic populations using data from the Australian Bureau of Statistics. To generate a synthetic population, a reference sample and population margins are required.
-
-> To use this tool, set the `tool name` for the relevant operation in your `workflow.yaml` to:
-
-```
-registry.rc.nectar.org.au/atrc-core/populationsynthesiser
-```
-
-The repository where you can find out more about this tool is here: [github.com/ATRC-AURIN/PopulationSynthesiser](https://github.com/ATRC-AURIN/PopulationSynthesiser)
 
 ## Licensing
 

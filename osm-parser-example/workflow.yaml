@@ -1,0 +1,29 @@
+operations:
+  - tool_name: registry.rc.nectar.org.au/atrc-core/planitosmparserwrapper
+    inputs:
+      - name: INPUT
+        method: initial_data
+        source_filename: melbourne.osm.pbf
+        filename: melbourne.osm.pbf
+      - name: COUNTRY
+        method: value
+        value: Australia
+        filename: COUNTRY.json
+      - name: FIDELITY
+        method: value
+        value: coarse
+        filename: FIDELITY.json
+      - name: CLEAN
+        method: value
+        value: yes
+        filename: CLEAN.json
+    outputs:
+      - name: NETWORK
+        type: xml
+        filename: output_network.xml
+      - name: NETWORK_CLEANED
+        type: xml
+        filename: output_network_cleaned.xml
+      - name: NETWORK_GEOMETRY
+        type: txt
+        filename: network_geometry.txt

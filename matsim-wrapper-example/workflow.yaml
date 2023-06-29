@@ -1,0 +1,37 @@
+operations:
+  - tool_name: registry.rc.nectar.org.au/atrc-core/planitmatsimwrapper
+    inputs:
+      - name: MODES
+        method: value
+        value: car_sim
+      - name: CRS
+        method: value
+        value: epsg:3112
+      - name: NETWORK
+        method: initial_data
+        source_filename: car_simple_melbourne_network_cleaned.xml
+        filename: car_simple_melbourne_network_cleaned.xml
+      - name: NETWORK_CRS
+        method: value
+        value: epsg:3112
+      - name: PLANS
+        method: initial_data
+        source_filename: plans_victoria_car.xml
+        filename: plans_victoria_car.xml
+      - name: PLANS_CRS
+        method: value
+        value: epsg:3112
+      - name: ACTIVITY_CONFIG
+        method: initial_data
+        source_filename: activity_config.xml
+        filename: activity_config.xml
+      - name: LINK_STATS
+        method: value
+        value: 1,1
+      - name: ITERATIONS_MAX
+        method: value
+        value: 2
+    outputs:
+      - name: EVENTS
+        type: gz
+        filename: ITERS/it.2/2.events.xml.gz
