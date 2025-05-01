@@ -1,6 +1,6 @@
 # ATRC Runner Demonstration
 
-Welcome to the Runner Demonstration repository for the [Australian Transport Research Cloud](https://aurin.org.au/about-aurin/projects/atrc/) project. The project involves multiple partners who have developed a range of tools relating to transportation data, analysis and simulation. The 'Workflow Runner' component of the project is a tool that runs these various tools in a consistent way, either individually or combined into multi-tool workflows.
+Welcome to the Runner Demonstration repository for the [Australian Transport Research Cloud](https://ardc.edu.au/project/australian-transport-research-cloud/) project. The project involves multiple partners who have developed a range of tools relating to transportation data, analysis and simulation. The 'Workflow Runner' component of the project is a tool that runs these various tools in a consistent way, either individually or combined into multi-tool workflows.
 
 This repo allows you to use your own machine to run a lightweight version of the Workflow Runner on a range of operating systems, using [a publicly available selection of the tools](#available-tools) built in the project.
 
